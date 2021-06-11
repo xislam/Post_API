@@ -1,6 +1,5 @@
 from rest_framework import serializers
-
-from webapp.models import Post
+from webapp.models import Post, Comment
 
 
 class PostSerializer(serializers.ModelSerializer):
@@ -9,8 +8,7 @@ class PostSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class Serializer(serializers.ModelSerializer):
+class CommentSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Post
+        model = Comment
         fields = '__all__'
-
