@@ -31,3 +31,18 @@ If you have any questions about challenge details, ask for more information, it'
 
 Have a good luck and looking forward to work with you!
 
+1. Скланируйте проект
+ git clone   https://github.com/xislam/Post_API.git
+2. Docker коменты
+  docker-compose build
+
+  docker-compose up
+  
+и проект заработает 
+
+
+3 точки входа api  находятся в файле Post.postman_collection.json
+
+
+
+ 
