@@ -71,23 +71,34 @@ WSGI_APPLICATION = 'main.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
+#
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'developstoday',
+#         'USER': 'islam',
+#         'PASSWORD': '123',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+#
+# }
+# try:
+#     from .settings_db import *
+# except ImportError:
+#     pass
+#
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'user',
-        'USER': 'user',
-        'PASSWORD': 'user',
-        'HOST': '127.0.0.1',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': '123456',
+        'HOST': 'db',
         'PORT': '5432',
     }
 
 }
-try:
-    from .settings_db import *
-except ImportError:
-    pass
-
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 

@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+
+
+  web:
+    build: ""
+    command: bash -c "python /usr/src/Post/source/manage.py migrate &&
+              python /usr/src/Post/source/manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/usr/src/Post
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
