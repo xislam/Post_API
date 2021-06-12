@@ -19,7 +19,7 @@ class Comment(models.Model):
 class Post(models.Model):
     title = models.CharField(_('title'), max_length=150)
     link = models.URLField(_('link'))
-    created = models.DateTimeField(_('created'), auto_now_add=True,)
+    created = models.DateTimeField(_('created'), auto_now_add=True, null=True)
     vote_count = models.IntegerField(_("number_of_votes"))
     author = models.CharField(_('author'), max_length=25)
 

@@ -24,7 +24,7 @@ SECRET_KEY = '$^la$dfb$tqfl7ncbxtiu*q&ey(u=dun4vuhbc5wka8w-*%l7l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ('*',)
 
 # Application definition
 
@@ -87,7 +87,9 @@ WSGI_APPLICATION = 'main.wsgi.application'
 #     from .settings_db import *
 # except ImportError:
 #     pass
-#
+
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',

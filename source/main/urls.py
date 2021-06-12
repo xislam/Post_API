@@ -26,7 +26,7 @@ router.register('comments', CommentViewSet, 'comment')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('posts/', include('webapp.urls')),
+    path('api/', include('webapp.urls')),
     path('posts/<int:pk>/like/', like_add, name='post-like'),
 ]
 
